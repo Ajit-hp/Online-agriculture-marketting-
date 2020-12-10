@@ -1,0 +1,60 @@
+Docker Installation commands:
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
+================================
+
+sudo apt update
+
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+
+sudo apt update
+
+apt-cache policy docker-ce
+
+sudo apt install docker-ce
+
+sudo systemctl status docker
+
+--------------------------------------------------------------------------------------------
+
+sudo docker ps                        ==>shows all containers
+
+[docker hub contains container image]
+-go to docker hub
+-search reqired image
+-copy the command and paste it on console
+ 
+sudo docker pull hello-world          ==>pull hello world image from docker hub
+
+sudo docker images                    ==>shows all images
+
+sudo docker pull nginx                ==>pull nginx server docker image from docker hub
+
+sudo docker run hello-world           ==>container instance created 
+
+sudo docker run --name webserver -d -p 8080:80 nginx:latest  ==>web server instance created of nginx
+
+sudo docker ps                        ==>shows running instances
+
+-change secruity groups to all & copy ip address apply url
+
+sudo docker stop 6629                 ==>stop instance
+
+sudo docker start 6629                ==>start instance
+
+sudo docker rmi bf756                 ==>remove instance
+
+sudo docker system prune -a           ==>remove all containers
+
+----------------------------------------------------------------------------------------
+git clone https://github.com/shekharshelke07/DacProject.git   ==>copy repository from githb
+
+sudo docker build -t firstnode .                                ==>install commands in docker from node as
+
+sudo docker run -p 8081:8081 firstnode                        ==>run instance on port 8081
+
+
+ 
